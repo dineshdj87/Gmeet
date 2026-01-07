@@ -242,3 +242,8 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+scheduler_events = {
+  "cron": {
+    "* * * * *": ["liveclass_monitor2.live_class_monitor_2.api.mark_dead_students"]
+  }
+}

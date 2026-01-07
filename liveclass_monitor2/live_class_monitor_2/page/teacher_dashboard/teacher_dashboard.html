@@ -1,0 +1,91 @@
+<div class="teacher-dashboard">
+
+    <h1 class="title">🎓 Classroom Live Monitor</h1>
+
+    <div id="session-info" class="session-box">
+        <p><b>Teacher:</b> <span id="teacher-name">—</span></p>
+        <p><b>Classroom:</b> <span id="classroom-name">—</span></p>
+        <p><b>Status:</b> <span id="session-status" class="status-active">Active</span></p>
+    </div>
+
+    <h2 class="subtitle">👥 Students</h2>
+
+    <table class="students-table">
+        <thead>
+            <tr>
+                <th>Student</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="students-body">
+        </tbody>
+    </table>
+</div>
+
+<!-- Alert popup -->
+<div id="alert-box" class="alert-popup hidden">
+    <p id="alert-text"></p>
+</div>
+
+<!-- Sound -->
+<audio id="alert-sound">
+    <source src="/assets/frappe/sounds/error.wav" type="audio/wav">
+</audio>
+
+<style>
+.teacher-dashboard {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.session-box {
+    background: #e3f9e5;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.status-active {
+    color: green;
+    font-weight: bold;
+}
+
+.students-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.students-table th,
+.students-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.alert-popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #ff4444;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    animation: slide-in 0.3s ease-out;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes slide-in {
+    from { transform: translateX(150%); }
+    to   { transform: translateX(0); }
+}
+</style>
