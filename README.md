@@ -38,7 +38,7 @@ Frontend:
 
 Deployment:
 - Bench
-- Docker (if deployed)
+  
 
 ---
 
